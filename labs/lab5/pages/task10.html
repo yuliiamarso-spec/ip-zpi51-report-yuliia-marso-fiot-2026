@@ -1,0 +1,115 @@
+<h2>Завдання №10</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Розробити клас Calculator, який дозволяє виконувати
+арифметичні операції над числом за допомогою методів класу.
+</p>
+
+<p>
+Клас повинен підтримувати ланцюжковий виклик методів
+(method chaining).
+</p>
+
+<p>
+Необхідно реалізувати методи:
+</p>
+
+<ul>
+    <li>
+        number() — для встановлення початкового значення;
+    </li>
+
+    <li>
+        add() — для додавання числа;
+    </li>
+
+    <li>
+        subtract() — для віднімання числа;
+    </li>
+
+    <li>
+        multiply() — для множення числа;
+    </li>
+
+    <li>
+        divide() — для ділення числа з перевіркою ділення на нуль;
+    </li>
+
+    <li>
+        getResult() — для отримання кінцевого результату обчислень.
+    </li>
+</ul>
+
+<p>
+Результат роботи програми необхідно вивести у консоль.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+class Calculator {
+    constructor() {
+        this.result  = 0;
+    }
+
+    number(value) {
+        this.result = this.result = value;
+        console.log("Після number:", this.result);
+        return this;
+    }
+
+    add(value) {
+        this.result = this.result + value;
+        console.log("Після add:", this.result);
+         return this;
+
+    }
+
+    subtract(value) {
+        this.result = this.result - value;
+        console.log("Після subtract:", this.result);
+        return this;
+    }
+
+    multiply(value) {
+        this.result = this.result * value;
+        console.log("Після multiply:", this.result);
+        return this;
+    }
+
+    divide(value) {
+        this.result = this.result / value;
+        console.log("Після divide:", this.result);
+        if (value === 0) {
+            throw new Error("Ділення на нуль неможливе");
+}
+            
+        return this;
+    }
+
+    getResult() {
+        return this.result;;
+    }
+
+}
+ 
+    const calc = new Calculator();
+
+    const result = calc
+    .number(10)
+    .add(5)
+    .subtract(3)
+    .multiply(4)
+    .divide(2)
+    .getResult();
+
+    console.log(result);
+</code></pre>
+
+<button onclick="labTask10Class()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task10.jpg" alt="Скріншот виконання завдання №10">

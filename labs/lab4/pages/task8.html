@@ -1,0 +1,105 @@
+<h2>Завдання №7</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Є двовимірний масив додатних і від’ємних чисел.
+Масив необхідно оголосити та проініціалізувати за допомогою
+генератора випадкових чисел.
+</p>
+
+<p>
+Необхідно:
+</p>
+
+<ul>
+    <li>
+        задати кількість рядків і стовпців двовимірного масиву;
+    </li>
+
+    <li>
+        створити двовимірний масив і заповнити його випадковими
+        додатними та від’ємними числами;
+    </li>
+
+    <li>
+        вивести початковий масив у Console браузера;
+    </li>
+
+    <li>
+        зберегти перший і останній елементи масиву в окремі змінні;
+    </li>
+
+    <li>
+        вставити число 25 після другого елемента масиву;
+    </li>
+
+    <li>
+        вивести змінений масив у Console браузера.
+    </li>
+</ul>
+
+<p>
+Для виконання завдання необхідно застосувати функції.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+let rows = Number(prompt("Введіть кількість рядків"));
+let columns = Number(prompt("Введіть кількість стовпців"));
+
+function createMatrix(rows, columns) {
+    let matrix = [];
+
+    for (let i = 0; i < rows; i++) {
+        let row = [];
+
+        for (let j = 0; j < columns; j++) {
+            let randomNumber = Math.floor(Math.random() * 199) - 99;
+            row.push(randomNumber);
+        }
+
+        matrix.push(row);
+    }
+
+    return matrix;
+}
+
+let filledMatrix = createMatrix(rows, columns); 
+
+// -----------------------------------------------------------------------------------//
+
+function firstAndLastElement(matrix) {
+    let firstElement = matrix[0][0];
+
+    let lastRow = matrix[matrix.length - 1];
+    let lastElement = lastRow[lastRow.length - 1];
+
+    return {
+        first: firstElement,
+        last: lastElement
+    };
+}
+
+// -----------------------------------------------------------------------------------//
+
+function insertAfterSecondElement(matrix){
+    matrix[0].splice(2, 0, 25);
+    return matrix;
+}
+
+console.log("Початковий двовимірний масив:", filledMatrix);
+
+let matrixElements = firstAndLastElement(filledMatrix);
+console.log("Перший і останній елементи масиву:", matrixElements);
+
+insertAfterSecondElement(filledMatrix);
+console.log("Масив після вставки 25:", filledMatrix);
+</code></pre>
+
+<button onclick="labTask8Matrix()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task8.jpg" alt="Скріншот виконання завдання №5">

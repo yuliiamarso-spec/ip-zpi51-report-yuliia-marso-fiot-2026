@@ -1,0 +1,97 @@
+<h2>Завдання №5</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Оголосити функцію makeTransaction(quantity, pricePerDroid, customerCredits),
+яка складає та повертає повідомлення про купівлю ремонтних дроїдів.
+</p>
+
+<p>
+Функція приймає три параметри:
+</p>
+
+<ul>
+    <li>
+        quantity — кількість замовлених дроїдів;
+    </li>
+
+    <li>
+        pricePerDroid — ціна одного дроїда;
+    </li>
+
+    <li>
+        customerCredits — сума коштів на рахунку клієнта.
+    </li>
+</ul>
+
+<p>
+У функції необхідно:
+</p>
+
+<ul>
+    <li>
+        обчислити загальну вартість замовлення;
+    </li>
+
+    <li>
+        перевірити, чи достатньо коштів у клієнта для оплати замовлення.
+    </li>
+</ul>
+
+<p>
+Якщо сума замовлення перевищує кількість кредитів на рахунку клієнта,
+функція повинна повертати рядок:
+</p>
+
+<p>
+Insufficient funds!
+</p>
+
+<p>
+В іншому випадку функція повинна повертати повідомлення:
+</p>
+
+<p>
+You ordered &lt;quantity&gt; droids worth &lt;totalPrice&gt; credits!
+</p>
+
+<p>де:</p>
+
+<ul>
+    <li>
+        &lt;quantity&gt; — кількість замовлених дроїдів;
+    </li>
+
+    <li>
+        &lt;totalPrice&gt; — загальна вартість замовлення.
+    </li>
+</ul>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function makeTransaction(quantity, pricePerDroid, customerCredits) {
+    
+    let totalPrice = quantity * pricePerDroid;
+
+    if(totalPrice > customerCredits){
+        return "Insufficient funds!";
+    }
+
+    else{
+        return `Your ordered ${quantity} droids worth ${totalPrice} credits`;
+    }
+}
+console.log(makeTransaction(3, 10, 40));
+alert(makeTransaction(3, 10, 40));
+
+console.log(makeTransaction(3, 10, 20));
+alert(makeTransaction(3, 10, 20));
+</code></pre>
+
+<button onclick="lab4Task5()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task5.jpg" alt="Скріншот виконання завдання №5">

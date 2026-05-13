@@ -1,0 +1,68 @@
+<h2>Завдання №3</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Напишіть функцію, яка приймає масив об’єктів medicines
+та повертає новий масив об’єктів, у якому для всіх медикаментів
+із ціною більше 300 грн застосовується знижка 30%.
+</p>
+
+<p>
+У новому масиві необхідно:
+</p>
+
+<ul>
+    <li>
+        додати для кожного медикамента id;
+    </li>
+
+    <li>
+        залишити назву медикамента;
+    </li>
+
+    <li>
+        змінити ціну з урахуванням знижки 30%.
+    </li>
+</ul>
+
+<p>
+Результат роботи програми необхідно вивести у консоль.
+</p>
+
+<p>
+Для виконання завдання необхідно використати методи filter() та map(),
+а також стрілочні функції.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function getDiscounts () {
+    const medicines = [
+        {name: "Noshpa", price: 170 },
+        {name: "Analgin", price: 55 },
+        {name: "Quanil", price: 310 },
+        {name: "Alphacholine", price: 390 },
+    ];
+
+
+const filterPrices = medicines.filter(medicine => medicine.price > 300);
+
+const medicinesDiscounts = filterPrices.map((medicine, index) => ({
+    id: index + 1,
+    name: medicine.name,
+    price: medicine.price * 0.7
+}))
+
+console.log(medicinesDiscounts);
+
+}
+getDiscounts();
+</code></pre>
+
+<button onclick="labTask3ObjArray()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task3.jpg" alt="Скріншот виконання завдання №3">

@@ -1,0 +1,81 @@
+<h2>Контрольні питання з CSS</h2>
+
+<ol>
+    <li>Для чого використовуються каскадні таблиці стилів?</li>
+    <div class="answer">
+        <p>Каскадні таблиці стилів (CSS) використовуються для відокремлення презентаційного оформлення від HTML-коду, дозволяючи змінювати вигляд елементів без зміни структури сторінки.</p>
+    </div>
+
+    <li>Які методи визначення стилів у HTML-документі ви знаєте?</li>
+    <div class="answer">
+        <p>В HTML можна визначати стилі трьома способами:</p>
+        <ul>
+            <li>Inline-стилі — через атрибут <code>style</code> у тегу: <code>&lt;p style="color:red;"&gt;Текст&lt;/p&gt;</code></li>
+            <li>Внутрішні стилі — через блок <code>&lt;style&gt;...&lt;/style&gt;</code> у <code>&lt;head&gt;</code></li>
+            <li>Зовнішні стилі — через файл <code>style.css</code> підключений тегом <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
+        </ul>
+    </div>
+
+    <li>У чому різниця між каскадуванням і спадкуванням?</li>
+    <div class="answer">
+        <p><strong>Каскадування:</strong> якщо до елемента застосовується кілька CSS-правил, браузер обирає пріоритетне на основі специфічності, порядку та важливості <code>!important</code></p>
+        <p><strong>Спадкування:</strong> властивості, як-от шрифт або колір тексту, автоматично передаються від батьківського елемента до дочірніх, якщо не перевизначені.</p>
+    </div>
+
+    <li>Як оформлюються селектори тегу і класу?</li>
+    <div class="answer">
+        <p>Селектор тегу задає стилі для всіх тегів певного типу:</p>
+        <pre><code>p {
+    font-size: 16px;
+    color: #444;
+}</code></pre>
+
+        <p>Селектор класу застосовується до елементів із певним класом:</p>
+        <pre><code>.highlight {
+    background-color: #ffe5e5;
+    font-weight: bold;
+}</code></pre>
+    </div>
+
+    <li>Для чого використовується ідентифікатор?</li>
+    <div class="answer">
+        <p>Ідентифікатор <code>id</code> застосовується для унікального позначення елемента. Дає можливість задавати стилі для одного конкретного блоку та звертатися до нього через JavaScript.</p>
+
+        <p>Приклад елемента з ідентифікатором:</p>
+        <pre><code>&lt;div id="output"&gt;
+    Тут відображається вибраний контент
+&lt;/div&gt;</code></pre>
+
+        <p>Приклад стилю:</p>
+        <pre><code>#output {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+}</code></pre>
+    </div>
+
+    <li>Навести приклади оформлення текстових елементів.</li>
+    <div class="answer">
+        <p>Приклади оформлення тексту:</p>
+        <pre><code>body {
+    font-family: Arial, sans-serif;
+}
+
+.logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slogan {
+    font-family: 'Nunito', sans-serif;
+    color: #b04f6f;
+}
+
+.bottom-bar .menu a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}</code></pre>
+    </div>
+</ol>

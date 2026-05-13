@@ -1,0 +1,79 @@
+<h2>Завдання №3</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Є декілька користувачів User1, User2, User3 з відповідними паролями.
+Їх потрібно оголосити та проініціалізувати.
+</p>
+
+<p>
+Написати програмний код, який запитуватиме у користувача логін
+за допомогою prompt і виводитиме результат у консоль браузера,
+використовуючи шаблонний рядок.
+</p>
+
+<p>Додати перевірку введеного користувачем значення:</p>
+
+<ul>
+    <li>
+        якщо відвідувач вводить User1, User2 або User3, то prompt запитує пароль;
+    </li>
+    <li>
+        у випадку вдалої ідентифікації в alert вивести Hello, User1,
+        Hello, User2 або Hello, User3;
+    </li>
+    <li>
+        якщо нічого не ввели або натиснули Cancel, то prompt знову просить
+        ввести логін користувача;
+    </li>
+    <li>
+        в іншому випадку вивести в alert рядок I don't know you.
+    </li>
+</ul>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+let user1Password = "QW12as";
+let user2Password = "QE12as";
+let user3Password = "QR12as";
+
+let login = (prompt("Введіть логін"));
+
+while (login === "" || login === null) {
+    login = prompt("Введіть логін користувача");
+}
+
+if (login === "User1" || login === "User1" || login === "User1") {
+
+    let password = (prompt("Введіть пароль")); 
+
+    if (login === "User1" && password === user1Password) {
+        console.log("Hello, User1");
+        alert("Hello, User1");
+    }
+    else if (login === "User2" && password === user2Password) {
+        console.log("Hello, User2");
+        alert("Hello, User2");
+    }
+    else if (login === "User3" && password === user3Password) {
+        console.log("Hello, User3");
+        alert("Hello, User3");
+    }
+    else {
+        console.log("Неправильний пароль");
+        alert("Неправильний пароль");
+    }
+
+} else {
+    console.log("I don't know you");
+    alert("I don't know you");
+} 
+</code></pre>
+
+<button onclick="lab4Task3()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task3.jpg" alt="Скріншот виконання завдання №3">

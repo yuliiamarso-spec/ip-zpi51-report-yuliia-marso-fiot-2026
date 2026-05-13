@@ -1,0 +1,60 @@
+<h2>Завдання №1</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+У звітному HTML-документі створити HTML-розмітку,
+яка складається з тексту, кнопки та двох інпутів.
+</p>
+
+<p>
+Після натискання на кнопку <strong>SWAP ME</strong>
+повинен здійснюватися обмін вмістом між двома інпутами.
+</p>
+
+<p><strong>Результат виконання:</strong></p>
+
+<div class="task-box">
+    <h3>ЗАВДАННЯ 1</h3>
+
+    <div class="task-controls">
+        <button id="swapBtn">SWAP ME</button>
+        <input id="firstInput" type="text" value="???">
+        <input id="secondInput" type="text" value="!!!">
+    </div>
+</div>
+
+<p><strong>Код HTML:</strong></p>
+
+<pre><code>
+&lt;div class="task-box task1-box"&gt;
+
+    &lt;h3&gt;ЗАВДАННЯ 1&lt;/h3&gt;
+
+    &lt;div class="task1-controls"&gt;
+
+        &lt;button id="swapBtn"&gt;SWAP ME&lt;/button&gt;
+
+        &lt;input id="firstInput" type="text" value="???"&gt;
+
+        &lt;input id="secondInput" type="text" value="!!!"&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+const swapBtn = document.querySelector("#swapBtn");
+const firstInput = document.querySelector("#firstInput");
+const secondInput = document.querySelector("#secondInput");
+
+swapBtn.addEventListener("click", function () {
+    const temp = firstInput.value;
+
+    firstInput.value = secondInput.value;
+    secondInput.value = temp;
+});
+</code></pre>

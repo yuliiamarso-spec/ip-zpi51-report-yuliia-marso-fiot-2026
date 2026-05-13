@@ -1,0 +1,62 @@
+<h2>Завдання №9</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Дано масив об’єктів users, який містить інформацію про користувачів.
+</p>
+
+<p>
+Кожен об’єкт містить:
+</p>
+
+<ul>
+    <li>
+        name — ім’я користувача;
+    </li>
+
+    <li>
+        age — вік користувача.
+    </li>
+</ul>
+
+<p>
+Необхідно відсортувати масив об’єктів за віком користувачів
+у порядку зростання.
+</p>
+
+<p>
+Очікуваний результат:
+</p>
+
+<p>
+[{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}]
+</p>
+
+<p>
+Результат роботи програми необхідно вивести у консоль.
+</p>
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function sortUsersByAge(){ 
+
+    const users = [
+        { name: "John", age: 27 },
+        { name: "Jane", age: 31 },
+        { name: "Bob", age: 19 },
+    ];
+
+    const result = users.sort((a, b) => a.age - b.age)
+
+    return result;
+}
+
+console.log(sortUsersByAge());
+</code></pre>
+
+<button onclick="labTask9Array()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task9.jpg" alt="Скріншот виконання завдання №9">

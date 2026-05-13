@@ -1,0 +1,67 @@
+<h2>Завдання №7</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Дано масив об’єктів people, який містить інформацію про людей.
+</p>
+
+<p>
+Кожен об’єкт містить:
+</p>
+
+<ul>
+    <li>
+        name — ім’я людини;
+    </li>
+
+    <li>
+        age — вік людини.
+    </li>
+</ul>
+
+<p>
+Необхідно перевірити, чи є хоча б один об’єкт,
+у якого вік менше 20 років.
+</p>
+
+<p>
+Очікуваний результат:
+</p>
+
+<p>
+true
+</p>
+
+<p>
+Результат роботи програми необхідно вивести у консоль.
+</p>
+
+<p>
+Для виконання завдання необхідно використати метод some()
+та стрілочні функції.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function personAge(){ 
+    const people =[
+        { name: "John", age: 27 },
+        { name: "Jane", age: 31 },
+        { name: "Bob", age: 19 },
+    ];
+    
+    const result = people.some(person => person.age < 20);
+
+    return result;
+}
+
+console.log(personAge());
+</code></pre>
+
+<button onclick="labTask7Array()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task7.png" alt="Скріншот виконання завдання №7">

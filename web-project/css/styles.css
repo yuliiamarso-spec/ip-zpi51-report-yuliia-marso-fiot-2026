@@ -1,0 +1,794 @@
+/* Базові стилі */
+body {
+    margin: 0;
+    padding: 0;
+    background: #e6cde2;
+    font-family: Arial, sans-serif;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+}
+
+/* Загальні налаштування смуг */
+.top-bar,
+.middle-bar,
+.bottom-bar {
+    padding: 10px 0;
+}
+
+.top-bar {
+    background-color: #000;
+    color: white;
+}
+
+.middle-bar {
+    background-color: #d18b97;
+    padding: 15px 0;
+}
+
+/* Внутрішній контейнер середньої смуги */
+.middle-bar .header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Кнопка реєстрації */
+.register a {
+    text-decoration: none;
+    color: white;
+    background-color: #d18b97;
+    padding: 10px 25px;
+    border-radius: 0;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Ефект наведення для кнопки реєстрації */
+.register a:hover {
+    color: #ffe5e5;
+}
+
+/* Внутрішній контейнер хедера */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Верхня смуга з логотипом */
+.top-bar .header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Блок логотипу */
+.logo-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Текст логотипу */
+.logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo-text .logo-icon {
+    height: 50px;
+    margin: 0 10px;
+}
+
+/* Слоган */
+.slogan {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Текст кнопки входу */
+.register {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.register a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Нижнє меню */
+.bottom-bar {
+    background-color: #e9b7b7;
+    padding: 15px 0;
+}
+
+.bottom-bar .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-bar .menu a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Підкреслення при наведенні */
+.bottom-bar .menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.bottom-bar .menu a:hover {
+    color: #fff;
+}
+
+.bottom-bar .menu a:hover::after {
+    width: 100%;
+}
+
+/* Адаптивне меню */
+@media (max-width: 768px) {
+    .bottom-bar .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .bottom-bar .menu a {
+        margin: 0;
+    }
+}
+
+/* MAIN */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Таблиця статистики */
+.donations-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.donations-table th,
+.donations-table td {
+    padding: 15px 20px;
+    text-align: left;
+    transition: background 0.3s, color 0.3s;
+}
+
+.donations-table thead th {
+    background: linear-gradient(90deg, #d18b97, #e9b7b7);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Рядки таблиці */
+.donations-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.donations-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.donations-table tbody tr:hover {
+    background-color: #fbe7ed;
+    cursor: pointer;
+}
+
+.donations-table td {
+    font-size: 15px;
+    color: #444;
+}
+
+/* Оформлення статусу */
+.donations-table td:nth-child(4) {
+    font-weight: 700;
+    color: #a16767;
+    text-align: center;
+    position: relative;
+}
+
+.donations-table td:nth-child(4)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 60%;
+    background: linear-gradient(90deg, #f28e9a, #d18b97);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Адаптив таблиці */
+@media (max-width: 768px) {
+    .donations-table th,
+    .donations-table td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Фонове фото та форма донату */
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+/* Фото фону */
+.background-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+/* Контейнер форми донату */
+.donate-container {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(14px);
+    padding: 35px 45px;
+    border-radius: 22px;
+    text-align: center;
+    width: 380px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+    animation: fadeIn 0.8s ease;
+}
+
+/* Заголовок форми донату */
+.donate-container h2 {
+    color: white;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+
+/* Поле суми внеску */
+.donate-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Стиль поля введення */
+.donate-input input {
+    width: 85%;
+    padding: 15px 50px 14px 20px;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+    outline: none;
+    background: #ffffffcc;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Прибирання стрілок */
+.donate-input input::-webkit-outer-spin-button,
+.donate-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Текст валюти */
+.currency {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+}
+
+/* Кнопки швидких сум */
+.preset-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.preset-buttons button {
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    background: #ffdee7;
+    color: #b04f6f;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.preset-buttons button:hover {
+    background: #ffcfdd;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.22);
+}
+
+/* Кнопка підтвердження донату */
+.submit-btn {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-radius: 14px;
+    background: #ca6c89;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: 0.25s ease;
+}
+
+.submit-btn:hover {
+    background: #b65672;
+    transform: translateY(-3px);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Анімація появи */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -46%); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Блок списків */
+.donate-lists {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+/* Списки у картках */
+.donate-list-left,
+.donate-list-right {
+    flex: 1;
+    background: #ffffffdd;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Ефект при наведенні */
+.donate-list-left:hover,
+.donate-list-right:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* Заголовки карток списків */
+.donate-list-left h3,
+.donate-list-right h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #b04f6f;
+}
+
+/* Маркований список ліворуч */
+.donate-list-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.donate-list-left ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Кастомний маркер */
+.donate-list-left ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+    background-color: #d18b97;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(209, 139, 151, 0.9);
+}
+
+/* Нумерований список праворуч */
+.donate-list-right ol {
+    counter-reset: donate-counter;
+    padding-left: 0;
+}
+
+.donate-list-right ol li {
+    list-style: none;
+    counter-increment: donate-counter;
+    margin-bottom: 12px;
+    padding-left: 32px;
+    position: relative;
+    font-size: 16px;
+}
+
+/* Кастомний номер */
+.donate-list-right ol li::before {
+    content: counter(donate-counter);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e9b7b7;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Блок новин */
+.news-section {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Посилання у новинах */
+.news-section a {
+    text-decoration: none;
+    color: #b04f6f;
+    transition: color 0.3s;
+}
+
+.news-section a:hover {
+    color: #e9b7b7;
+}
+
+/* Ліва колонка новин */
+.news-left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Картка новини */
+.news-item {
+    background: #ffffffdd;
+    padding: 15px 18px;
+    border-radius: 14px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-left: 4px solid #d18b97;
+}
+
+/* Ефект наведення */
+.news-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+}
+
+/* Фото картки новини */
+.news-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+/* Права колонка новин */
+.news-right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Стаття новин */
+.news-article {
+    background: #ffffffdd;
+    padding: 20px 22px;
+    border-radius: 16px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-left: 5px solid #d18b97;
+}
+
+/* Ефект наведення */
+.news-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Фото статті */
+.news-article img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 12px 0;
+    object-fit: cover;
+}
+
+/* Текст статті */
+.news-article p {
+    line-height: 1.55;
+    color: #444;
+    font-size: 16px;
+}
+
+/* Сайдбар новин */
+.news-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.news-sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Картки сайдбару */
+.sidebar-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.sidebar-cards .card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9e6f0;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Фото картки сайдбару */
+.sidebar-cards .card img {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+/* Текст картки сайдбару */
+.sidebar-cards .card p {
+    font-size: 14px;
+    margin: 0;
+    flex: 1;
+    transition: color 0.3s ease;
+}
+
+/* Ефект наведення */
+.sidebar-cards .card:hover {
+    background: #e6c0db;
+    color: #222;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Верхня частина футера */
+.top-footer {
+    background-color: #000;
+    color: white;
+    padding: 15px 0;
+}
+
+.top-footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Соціальні іконки */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0.8);
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+/* Середня частина футера */
+.middle-footer {
+    background-color: #d18b97;
+    color: white;
+    padding: 40px 0;
+}
+
+.middle-footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    gap: 30px;
+}
+
+/* Колонки футера */
+.footer-column {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Заголовок колонки */
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+}
+
+/* Список посилань */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Кастомний маркер */
+.footer-column ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #fff5f5;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Плавна зміна кольору посилань */
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffe5e5;
+}
+
+/* Контактні дані */
+.footer-column p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Нижня частина футера */
+.bottom-footer {
+    background-color: #e9b7b7;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.bottom-footer p {
+    margin: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

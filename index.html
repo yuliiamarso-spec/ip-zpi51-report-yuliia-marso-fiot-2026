@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script_index.js" defer></script>
+</head>
+<body>
+
+<!-- Початок обгортки сторінки -->
+<div class="page-wrapper">
+
+    <!-- Верхня панель з назвою -->
+    <header>
+        <div class="top-bar">
+            <div class="header-container">
+                <h1 class="text">
+                    ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ З ДИСЦИПЛІНИ "Проєктування WEB-застосувань"
+                </h1>
+            </div>
+        </div>
+
+        <!-- Середня панель із даними -->
+        <div class="middle-bar">
+            <div class="header-container middle-row">
+                <div class="author-text">
+                    Виконавець: Студентка групи ІП-зп51 Марсо Ю. Г.
+                </div>
+                <div class="author-photo">
+                    <img src="img/photo1.jpg" alt="photo">
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижнє меню навігації між лабораторними -->
+        <div class="bottom-bar">
+            <div class="header-container">
+                <nav class="menu">
+                    <a href="index.html">Головна</a>
+                    <a href="labs/lab1/lab1.html">Лабораторна 1</a>
+                    <a href="labs/lab2/lab2.html">Лабораторна 2</a>
+                    <a href="labs/lab3/lab3.html">Лабораторна 3</a>
+                    <a href="labs/lab4/lab4.html">Лабораторна 4</a>
+                    <a href="labs/ab5/lab5.html">Лабораторна 5</a>
+                    <a href="labs/lab6/lab6.html">Лабораторна 6</a>
+                    <a href="labs/lab7/lab7.html">Лабораторна 7</a>
+                    <a href="labs/lab8/lab8.html">Лабораторна 8</a>
+                    <a href="labs/lab9/lab9.html">Лабораторна 9</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-container">
+        <div class="content-section">
+
+            <!-- ЛІВА ПАНЕЛЬ -->
+            <div class="left-side">
+                <aside>
+                    <nav class="left-nav">
+                        <ul>
+                            <li><a href="#" onclick="showTab('welcome')">Ласкаво просимо</a></li>
+                            <li><a href="#" onclick="showTab('course')">Опис курсу</a></li>
+                            <li><a href="#" onclick="showTab('instructions')">Інструкції</a></li>
+                            <li><a href="#" onclick="showTab('contacts')">Контакти студента</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+
+            <!-- ПРАВА ПАНЕЛЬ -->
+            <div class="right-side">
+                <div class="info-card" id="output">
+
+                    <!-- Вкладки головної сторінки -->
+                    <div id="welcome" class="tab-content">
+                        <h2>Ласкаво просимо!</h2>
+                        <p>Тут можна знайти всі лабораторні роботи з дисципліни "Проєктування WEB-застосувань".</p>
+                    </div>
+
+                    <div id="course" class="tab-content" style="display:none;">
+                        <h2>Опис курсу</h2>
+                        <p>Цей курс навчить вас HTML, CSS та базовому JS для створення веб-застосунків.</p>
+                    </div>
+
+                    <div id="instructions" class="tab-content" style="display:none;">
+                        <h2>Інструкції для користувачів</h2>
+                        <ul>
+                            <li>Виберіть лабораторну роботу у верхньому меню.</li>
+                            <li>Вивчайте приклади у правій частині екрана.</li>
+                            <li>Перевіряйте власні рішення на локальному сервері.</li>
+                        </ul>
+                    </div>
+
+                    <div id="contacts" class="tab-content" style="display:none;">
+                        <h2>Контакти студента</h2>
+                        <p>Email: yuliia.marso@gmail.com</p>
+                        <p>Телефон: +380 00 000 00 00</p>
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- кінець секції контенту -->
+    </div> <!-- кінець головного контейнера -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Марсо Ю. Г. – Звіти з лабораторних робіт з дисципліни "Проєктування WEB-застосувань"</p>
+            <p>Контакти: <a href="mailto:yuliia.marso@gmail.com">yuliia.marso@gmail.com</a></p>
+        </div>
+    </footer>
+
+</div> <!-- кінець обгортки сторінки -->
+
+</body>
+</html>

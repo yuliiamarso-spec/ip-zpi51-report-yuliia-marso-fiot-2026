@@ -1,0 +1,61 @@
+<h2>Завдання №4</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Оголосити функцію getShippingMessage, яка очікує три параметри,
+значення яких будуть задаватися під час її виклику:
+</p>
+
+<ul>
+    <li>
+        country — перший параметр, рядок, що містить країну доставки;
+    </li>
+
+    <li>
+        price — другий параметр, число, що містить загальну вартість товару;
+    </li>
+
+    <li>
+        deliveryFee — третій параметр, число, що містить вартість доставки товару.
+    </li>
+</ul>
+
+<p>
+Написати код функції так, щоб вона повертала рядок з повідомленням
+про доставку товару в країну користувача:
+</p>
+
+<p>
+Shipping to &lt;country&gt; will cost &lt;totalPrice&gt; credits
+</p>
+
+<p>де:</p>
+
+<ul>
+    <li>
+        &lt;country&gt; — країна доставки;
+    </li>
+
+    <li>
+        &lt;totalPrice&gt; — загальна вартість замовлення,
+        що включає вартість товару і його доставки.
+    </li>
+</ul>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function getShippingMessage(country, price, deliveryFee) {
+    let totalPrice = price + deliveryFee;
+    return `Shipping to ${country} will cost ${totalPrice} credits`;
+}
+    console.log(getShippingMessage("Norway", 120, 50));
+    alert(getShippingMessage("Norway", 120, 50));
+</code></pre>
+
+<button onclick="lab4Task4()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task4.png" alt="Скріншот виконання завдання №4">

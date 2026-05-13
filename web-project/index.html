@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DobroДій</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/modal.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <!-- HEADER Верхня частина сайту -->
+    <header>
+
+        <!-- Верхня смуга -->
+        <div class="top-bar">
+            <div class="header-container">
+                <div class="logo-block">
+                    <h1 class="logo-text">
+                        D<img src="img/heart.png" class="logo-icon">broДій
+                    </h1>
+                    <h2 class="slogan">Допомагай разом з нами!</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Середня смуга -->
+        <div class="middle-bar">
+            <div class="header-container">
+                <h2 class="register">
+                    <a href="#">Створити акцію / Увійти</a>
+                </h2>
+            </div>
+        </div>
+
+        <!-- Нижня смуга меню -->
+        <div class="bottom-bar">
+            <div class="header-container">
+                <nav class="menu">
+                    <a href="#">Головна</a>
+                    <a href="#">Каталог</a>
+                    <a href="#">Новини</a>
+                    <a href="#">Про проект</a>
+                    <a href="#">Контакти</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- MAIN Основний контейнер -->
+    <div class="main-container">
+
+        <!-- Таблиця статистики донатів -->
+        <div class="table-container">
+            <h2>Статистика донатів</h2>
+
+            <table class="donations-table">
+                <thead>
+                    <tr>
+                        <th>Проєкт</th>
+                        <th>Мета (UAH)</th>
+                        <th>Зібрано (UAH)</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-description="Проєкт допомагає дітям, які потребують лікування та гуманітарної підтримки.">
+                        <td>Допомога дітям</td>
+                        <td>50000</td>
+                        <td>32000</td>
+                        <td>64%</td>
+                    </tr>
+                    <tr>
+                        <td>Благодійний фонд</td>
+                        <td>100000</td>
+                        <td>78000</td>
+                        <td>78%</td>
+                    </tr>
+                    <tr>
+                        <td>Допомога тваринам</td>
+                        <td>20000</td>
+                        <td>12000</td>
+                        <td>60%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Секція донату з фоном -->
+        <section class="photo-wrapper">
+            <img src="img/donate.webp" alt="Background" class="background-photo">
+
+            <div class="donate-container">
+                <h2>Швидкий донат</h2>
+
+                <form class="donate-form">
+                    <div class="donate-input">
+                        <input type="number" placeholder="Ваш внесок" required>
+                        <span class="currency">UAH</span>
+                    </div>
+
+                    <div class="preset-buttons">
+                        <button type="button">+100</button>
+                        <button type="button">+500</button>
+                        <button type="button">+1000</button>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Підтримати</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Два списки зліва та справа -->
+        <div class="donate-lists">
+
+            <!-- Ліва колонка маркований список -->
+            <div class="donate-list-left">
+                <h3>На що йдуть ваші донати:</h3>
+                <ul>
+                    <li>Підтримка медичних закладів</li>
+                    <li>Гуманітарні набори для сімей</li>
+                    <li>Порятунок бездомних тварин</li>
+                    <li>Допомога дітям та переселенцям</li>
+                </ul>
+            </div>
+
+            <!-- Права колонка нумерований список -->
+            <div class="donate-list-right">
+                <h3>Як зробити донат:</h3>
+                <ol>
+                    <li>Введіть суму у полі Ваш внесок</li>
+                    <li>Виберіть готову суму або залиште свою</li>
+                    <li>Натисніть кнопку Підтримати</li>
+                    <li>Підтвердіть платіж у банку</li>
+                </ol>
+            </div>
+
+        </div>
+
+        <!-- Блок новин ліва та права частина -->
+        <div class="news-section">
+
+            <!-- Ліва колонка новин -->
+            <div class="news-left">
+
+                <div class="news-item">
+                    <h2><a href="#">Доступні акції</a></h2>
+                    <h3><a href="#">Підтримка медичних закладів та тяжкохворих</a></h3>
+                    <a href="#"><img src="img/photo1.jpg" alt="News 1"></a>
+                    <h4><a href="#">"Серце допомоги"</a></h4>
+                </div>
+
+                <div class="news-item">
+                    <h3><a href="#">Допомога людям із інвалідністю</a></h3>
+                    <a href="#"><img src="img/photo2.jpg" alt="News 2"></a>
+                    <h4><a href="#">"Рівні можливості"</a></h4>
+                </div>
+
+                <div class="news-item">
+                    <h3><a href="#">Підтримка людей похилого віку</a></h3>
+                    <a href="#"><img src="img/photo3.jpeg" alt="News 3"></a>
+                    <h4><a href="#">"Повага у дії"</a></h4>
+                </div>
+
+                <div class="news-item">
+                    <h3><a href="#">Допомога бездомним тваринам</a></h3>
+                    <a href="#"><img src="img/photo4.jpg" alt="News 4"></a>
+                    <h4><a href="#">"Теплі лапки"</a></h4>
+                </div>
+            </div>
+
+            <!-- Права колонка новин -->
+            <div class="news-right">
+
+                <article class="news-article">
+                    <h2><a href="#">Новини</a></h2>
+                    <h3><a href="#">Допомога постраждалим у зонах бойових дій</a></h3>
+                    <a href="#"><img src="img/photo5.jpg" alt="News 5"></a>
+                    <h4><a href="#">"Життя з нуля"</a></h4>
+                    <p>У зонах бойових дій тисячі людей змушені залишати свої домівки та починати життя з нуля...</p>
+                    <a href="#" class="read-more">читати далі</a>
+                </article>
+
+                <article class="news-article">
+                    <h3><a href="#">Збір коштів для дитячого будинку</a></h3>
+                    <a href="#"><img src="img/photo6.jpg" alt="News 6"></a>
+                    <h4><a href="#">Благодійна акція Подаруй дитині свято</a></h4>
+                    <p>Благодійна акція Подаруй дитині свято спрямована на збір коштів для дітей...</p>
+                    <a href="#" class="read-more">читати далі</a>
+                </article>
+
+                <!-- Бічна панель новин -->
+                <div class="news-sidebar">
+                    <h3>Корисні посилання</h3>
+
+                    <div class="sidebar-cards">
+                        <div class="card">
+                            <img src="img/arrow.svg" alt="Volunteering">
+                            <p><a href="#">Дізнайся як стати волонтером та допомогти прямо зараз.</a></p>
+                        </div>
+                        <div class="card">
+                            <img src="img/arrow.svg" alt="Donate">
+                            <p><a href="#">Обери проєкт та зроби свій внесок онлайн.</a></p>
+                        </div>
+                        <div class="card">
+                            <img src="img/arrow.svg" alt="News">
+                            <p><a href="#">Читайте останні новини та історії успіху.</a></p>
+                        </div>
+                    </div>
+
+                </div> <!-- завершення блоку news sidebar -->
+            </div> <!-- завершення блоку news right -->
+        </div> <!-- завершення блоку news section -->
+
+    </div> <!-- завершення блоку main container -->
+
+    <!-- FOOTER Нижня частина сайту -->
+    <footer>
+
+        <!-- Верхня смуга футера -->
+        <div class="top-footer">
+            <div class="footer-container">
+                <div class="footer-text">Зв’яжіться з нами:</div>
+
+                <div class="social-icons">
+                    <a href="#"><img src="icons/Facebook.svg" class="social-icon"></a>
+                    <a href="#"><img src="icons/Instagram.svg" class="social-icon"></a>
+                    <a href="#"><img src="icons/Telegram.svg" class="social-icon"></a>
+                    <a href="#"><img src="icons/YouTube.svg" class="social-icon"></a>
+                    <a href="#"><img src="icons/LinkedIn.svg" class="social-icon"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-footer">
+            <div class="footer-container">
+
+                <div class="footer-column">
+                    <h4>Проєкти</h4>
+                    <ul>
+                        <li><a href="#">Зробити добро</a></li>
+                        <li><a href="#">Проєкти</a></li>
+                        <li><a href="#">Кампанії</a></li>
+                        <li><a href="#">Спецпроєкти</a></li>
+                        <li><a href="#">SMS благодійність</a></li>
+                        <li><a href="#">Скарбнички</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Про платформу</h4>
+                    <ul>
+                        <li><a href="#">Про нас</a></li>
+                        <li><a href="#">Як працює DobroДій</a></li>
+                        <li><a href="#">Наші партнери</a></li>
+                        <li><a href="#">Інше</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>FAQ</h4>
+                    <ul>
+                        <li><a href="#">Як зробити добро</a></li>
+                        <li><a href="#">Умови сервісу</a></li>
+                        <li><a href="#">Способи оплати</a></li>
+                        <li><a href="#">Умови конфіденційності</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Контакти</h4>
+                    <p>м Київ вул Саксаганського 4а</p>
+                    <p>info@dobrodiy.com</p>
+                    <p>(044) 243 14 32</p>
+                    <p>(044) 243 14 33</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <div class="footer-container">
+                <p>© 2025 DobroДій Всі права захищені.</p>
+            </div>
+        </div>
+
+    </footer>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <button type="button" class="modal-close">×</button>
+        <h3 class="modal-title"></h3>
+        <p class="modal-description"></p>
+    </div>
+</div>
+
+</div> <!-- завершення обгортки сторінки -->
+</body>
+</html>

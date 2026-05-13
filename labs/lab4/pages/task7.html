@@ -1,0 +1,160 @@
+<h2>Завдання №7</h2>
+
+<h3>Завдання №1</h3>
+<p><strong>Умова:</strong></p>
+
+<p>
+Створити два одновимірних масиви, кількість елементів яких
+задається користувачем.
+</p>
+
+<p>
+Необхідно:
+</p>
+
+<ul>
+    <li>
+        заповнити перший масив значеннями, введеними користувачем;
+    </li>
+
+    <li>
+        заповнити другий масив значеннями, введеними користувачем;
+    </li>
+
+    <li>
+        знайти елементи першого масиву, які співпадають
+        зі значеннями елементів другого масиву;
+    </li>
+
+    <li>
+        визначити найменший серед спільних елементів;
+    </li>
+
+    <li>
+        якщо спільних елементів немає — вивести відповідне повідомлення.
+    </li>
+</ul>
+
+<p>
+Для виконання завдання необхідно застосувати функції.
+</p>
+
+<h3>Завдання №2</h3>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Упорядкувати масив у порядку зростання методом бульбашки.
+</p>
+
+<p>
+Необхідно:
+</p>
+
+<ul>
+    <li>
+        вивести вхідний масив;
+    </li>
+
+    <li>
+        виконати сортування масиву методом бульбашки;
+    </li>
+
+    <li>
+        вивести відсортований масив.
+    </li>
+</ul>
+
+<p>
+Для виконання завдання необхідно застосувати функції.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+let firstArray = [];
+let secondArray = [];
+
+let firstArrayLength = Number(prompt("Введіть кількість елементів першого масиву"));
+for (let i = 0; i < firstArrayLength; i++) {
+
+    let element = Number(prompt(`Введіть ${i + 1} елемент першого масиву`));
+    firstArray.push(element);
+}
+
+let secondArrayLength = Number(prompt("Введіть кількість елементів другого масиву"));
+for (let i = 0; i < secondArrayLength; i++) {
+
+    let element = Number(prompt(`Введіть ${i + 1} елемент другого масиву`));
+    secondArray.push(element);
+
+}
+
+function findSameElements(firstArray, secondArray) {
+    let sameElements = [];
+
+    for (let i = 0; i < firstArray.length; i++) {
+        if (secondArray.includes(firstArray[i])) {
+            sameElements.push(firstArray[i]);
+        }
+    }
+
+    return sameElements;
+}
+
+let sameElements = findSameElements(firstArray, secondArray);
+
+function findMinElement(sameElements) {
+    if (sameElements.length === 0) {
+        return "Співпадаючих елементів немає";
+    }
+
+    return Math.min(...sameElements);
+}
+
+let minElement = findMinElement(sameElements);
+
+console.log("Перший масив:", firstArray);
+console.log("Другий масив:", secondArray);
+console.log("Спільні елементи:", sameElements);
+console.log("Найменший спільний елемент:", minElement);
+
+
+// -----------------------------------------------------------------------------------//
+
+function bubbleSort(array) {
+    let sortedArray = array.slice();
+
+    for (let i = 0; i < sortedArray.length - 1; i++) {
+        for (let j = 0; j < sortedArray.length - 1 - i; j++) {
+            if (sortedArray[j] > sortedArray[j + 1]) {
+                let temp = sortedArray[j];
+                sortedArray[j] = sortedArray[j + 1];
+                sortedArray[j + 1] = temp;
+            }
+        }
+    }
+
+    return sortedArray;
+}
+
+let sortedFirstArray = bubbleSort(firstArray);
+let sortedSecondArray = bubbleSort(secondArray);
+
+
+function printArray(message, array) {
+    console.log(message, array);
+}
+
+printArray("Перший вхідний масив:", firstArray);
+printArray("Перший відсортований масив:", sortedFirstArray);
+
+printArray("Другий вхідний масив:", secondArray);
+printArray("Другий відсортований масив:", sortedSecondArray);
+</code></pre>
+
+<button onclick="labTask7Arrays()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task7.jpg" alt="Скріншот виконання завдання №5">

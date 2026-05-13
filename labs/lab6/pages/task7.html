@@ -1,0 +1,136 @@
+<h2>Завдання №7</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Написати скрипт створення й очищення колекції елементів.
+</p>
+
+<p>
+У HTML-документі створити блок керування div#controls,
+який містить input для введення кількості елементів,
+кнопку Create та кнопку Destroy.
+</p>
+
+<p>
+Також створити порожній блок div#boxes, у який будуть
+додаватися створені елементи.
+</p>
+
+<p>
+Після натискання на кнопку Create необхідно:
+</p>
+
+<ul>
+    <li>отримати значення з input;</li>
+    <li>перевірити, чи число знаходиться в межах від 1 до 100 включно;</li>
+    <li>якщо значення правильне — створити відповідну кількість div-елементів;</li>
+    <li>очистити значення input після створення елементів;</li>
+    <li>при повторному натисканні Create стара колекція має замінюватися новою.</li>
+</ul>
+
+<p>
+Перший створений div має мати розмір 30px на 30px.
+Кожен наступний div має бути ширшим і вищим від попереднього на 10px.
+Усі елементи повинні мати випадковий колір фону.
+</p>
+
+<p>
+Після натискання на кнопку Destroy необхідно очистити вміст div#boxes.
+</p>
+
+<p>
+Для виконання завдання необхідно створити функції:
+createBoxes(amount) та destroyBoxes().
+</p>
+
+<p><strong>Результат виконання:</strong></p>
+
+<div class="task-box">
+
+    <h3>ЗАВДАННЯ 7</h3>
+
+    <div id="controls">
+        <input type="number" min="1" max="100" step="1" />
+        <button type="button" data-create>Create</button>
+        <button type="button" data-destroy>Destroy</button>
+    </div>
+
+    <div id="boxes"></div>
+
+</div>
+
+<p><strong>Код HTML:</strong></p>
+
+<pre><code>
+&lt;div class="task-box"&gt;
+
+    &lt;h3&gt;ЗАВДАННЯ 7&lt;/h3&gt;
+
+    &lt;div id="controls"&gt;
+        &lt;input type="number" min="1" max="100" step="1" /&gt;
+        &lt;button type="button" data-create&gt;Create&lt;/button&gt;
+        &lt;button type="button" data-destroy&gt;Destroy&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div id="boxes"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+const input = document.querySelector("#controls input");
+const createButton = document.querySelector("[data-create]");
+const destroyButton = document.querySelector("[data-destroy]");
+const boxes = document.querySelector("#boxes");
+
+createButton.addEventListener("click", () => {
+
+    const amount = Number(input.value);
+
+    if (amount < 1 || amount > 100) {
+        alert("Введіть число від 1 до 100");
+        return;
+    }
+
+    destroyBoxes();
+    createBoxes(amount);
+
+    input.value = "";
+});
+
+destroyButton.addEventListener("click", () => {
+    destroyBoxes();
+});
+
+function createBoxes(amount) {
+
+    let size = 30;
+
+    for (let i = 0; i < amount; i++) {
+
+        const box = document.createElement("div");
+
+        box.style.width = `${size}px`;
+        box.style.height = `${size}px`;
+
+        box.style.backgroundColor = getRandomHexColor();
+
+        boxes.append(box);
+
+        size += 10;
+    }
+}
+
+function destroyBoxes() {
+    boxes.innerHTML = "";
+}
+
+function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, 0)}`;
+}
+</code></pre>

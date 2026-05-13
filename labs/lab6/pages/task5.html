@@ -1,0 +1,128 @@
+<h2>Завдання №5</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+У звітному HTML-документі створити форму логіна form.login-form.
+</p>
+
+<p>
+Форма повинна містити два поля введення:
+email та password, а також кнопку відправлення форми.
+</p>
+
+<p>
+Необхідно написати скрипт керування формою логіна.
+Обробка відправлення форми повинна відбуватися за подією submit.
+</p>
+
+<p>
+Під час відправлення форми сторінка не повинна перезавантажуватися.
+</p>
+
+<p>
+Якщо при відправленні форми є незаповнені поля,
+необхідно вивести alert з повідомленням:
+"All form fields must be filled in".
+</p>
+
+<p>
+Валідація повинна відбуватися саме через JavaScript,
+без додавання атрибута required до інпутів.
+</p>
+
+<p>
+Якщо користувач заповнив усі поля і відправив форму,
+необхідно зібрати значення полів в об’єкт з двома властивостями.
+Ключами об’єкта мають бути імена інпутів,
+а значеннями — відповідні значення, очищені від пробілів по краях.
+</p>
+
+<p>
+Для доступу до елементів форми необхідно використати властивість elements.
+</p>
+
+<p>
+Після відправлення форми об’єкт із введеними даними потрібно
+вивести в консоль, а значення полів форми очистити методом reset().
+</p>
+
+<p><strong>Результат виконання:</strong></p>
+
+<div class="task-box">
+
+    <h3>ЗАВДАННЯ 5</h3>
+
+    <form class="login-form">
+
+        <label>
+            Email
+            <input type="email" name="email" />
+        </label>
+
+        <label>
+            Password
+            <input type="password" name="password" />
+        </label>
+
+        <button type="submit">Log in</button>
+
+    </form>
+
+</div>
+
+<p><strong>Код HTML:</strong></p>
+
+<pre><code>
+&lt;div class="task-box"&gt;
+
+    &lt;h3&gt;ЗАВДАННЯ 5&lt;/h3&gt;
+
+    &lt;form class="login-form"&gt;
+
+        &lt;label&gt;
+            Email
+            &lt;input type="email" name="email" /&gt;
+        &lt;/label&gt;
+
+        &lt;label&gt;
+            Password
+            &lt;input type="password" name="password" /&gt;
+        &lt;/label&gt;
+
+        &lt;button type="submit"&gt;Log in&lt;/button&gt;
+
+    &lt;/form&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+const form = document.querySelector(".login-form");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = form.elements.email.value.trim();
+    const password = form.elements.password.value.trim();
+
+    if (email === "" || password === "") {
+        alert("All form fields must be filled in");
+        return;
+    }
+
+    const formData = {
+        email: email,
+        password: password
+    };
+
+    console.log(formData);
+    form.reset();
+});
+</code></pre>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task5.jpg" alt="Скріншот виконання завдання №5">

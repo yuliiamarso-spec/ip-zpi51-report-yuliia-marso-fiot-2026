@@ -1,0 +1,86 @@
+<h2>Завдання №2</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+У звітному HTML-документі створити HTML-розмітку,
+яка складається з тексту, блоку (div) та двох кнопок.
+</p>
+
+<p>
+Кнопка <strong>Зменшити</strong> повинна зменшувати
+розмір квадрата на 15 пікселів.
+</p>
+
+<p>
+Кнопка <strong>Збільшити</strong> повинна збільшувати
+розмір квадрата на 15 пікселів.
+</p>
+
+<p>
+Повторне натискання на кнопки повинно змінювати
+розмір квадрата відповідно до обраної дії.
+</p>
+
+<p><strong>Результат виконання:</strong></p>
+
+<div class="task-box">
+
+    <h3>ЗАВДАННЯ 2</h3>
+
+    <div class="task2-square"></div>
+
+    <div class="task-controls">
+
+        <button id="decreaseBtn">Зменшити</button>
+        <button id="increaseBtn">Збільшити</button>
+
+    </div>
+
+</div>
+
+<p><strong>Код HTML:</strong></p>
+
+<pre><code>
+<pre><code>
+&lt;div class="task-box"&gt;
+
+    &lt;h3&gt;ЗАВДАННЯ 2&lt;/h3&gt;
+
+    &lt;div class="task2-square"&gt;&lt;/div&gt;
+
+    &lt;div class="task-controls"&gt;
+
+        &lt;button id="decreaseBtn"&gt;Зменшити&lt;/button&gt;
+
+        &lt;button id="increaseBtn"&gt;Збільшити&lt;/button&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+</code></pre>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+const square = document.querySelector(".task2-square");
+const decreaseBtn = document.querySelector("#decreaseBtn");
+const increaseBtn = document.querySelector("#increaseBtn");
+
+let size = 100;
+
+decreaseBtn.addEventListener("click", function () {
+    size = size - 15;
+    square.style.width = size + "px";
+    square.style.height = size + "px";
+
+});
+
+increaseBtn.addEventListener("click", function () {
+    size = size + 15;
+    square.style.width = size + "px";
+    square.style.height = size + "px";
+
+});
+</code></pre>

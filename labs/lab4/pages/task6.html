@@ -1,0 +1,68 @@
+<h2>Завдання №6</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Оголосити функцію makeArray(firstArray, secondArray, maxLength),
+яка створює та повертає новий масив.
+</p>
+
+<p>
+Функція приймає три параметри:
+</p>
+
+<ul>
+    <li>
+        firstArray — перший масив;
+    </li>
+
+    <li>
+        secondArray — другий масив;
+    </li>
+
+    <li>
+        maxLength — максимальна довжина нового масиву.
+    </li>
+</ul>
+
+<p>
+Функція повинна створити новий масив, який містить усі елементи
+з firstArray, а потім усі елементи з secondArray.
+</p>
+
+<p>
+Якщо кількість елементів у новому масиві перевищує maxLength,
+функція повинна повернути копію масиву довжиною maxLength елементів.
+</p>
+
+<p>
+В іншому випадку функція повинна повернути весь новий масив.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function makeArray(firstArray, secondArray, maxLength ) {
+
+    let newArray = firstArray.concat(secondArray);
+
+    if(newArray.length >  maxLength){
+        return newArray.slice(0, maxLength);
+    }
+
+    else{
+        return newArray;
+    }
+}
+console.log(makeArray([1, 2], [3, 4], 3));
+alert(makeArray([1, 2], [3, 4], 3));
+
+console.log(makeArray([5, 6, 7], [8, 9], 5));
+alert(makeArray([5, 6, 7], [8, 9], 5));
+</code></pre>
+
+<button onclick="lab4Task6()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task6.jpg" alt="Скріншот виконання завдання №5">

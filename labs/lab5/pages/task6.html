@@ -1,0 +1,65 @@
+<h2>Завдання №6</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Напишіть функцію checkBrackets(someFn), яка приймає рядок JavaScript-коду
+та перевіряє, чи правильно у ньому закриті дужки.
+</p>
+
+<p>
+Функція повинна перевіряти такі типи дужок:
+</p>
+
+<p>
+(), {}, []
+</p>
+
+<p>
+Якщо всі дужки у рядку закриті правильно, функція повинна повернути true.
+</p>
+
+<p>
+Якщо порядок закриття дужок неправильний або деякі дужки не закриті,
+функція повинна повернути false.
+</p>
+
+<p>
+Результат роботи функції необхідно вивести у консоль.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function checkBrackets(str) {
+    const brackets = [];
+
+    for (const char of str) {
+        if (char === "(" || char === "{" || char === "[") {
+            brackets.push(char);
+        }
+        else if (char === ")" || char === "}" || char === "]") {
+            const lastBracket = brackets.pop();
+
+            if(
+                (char === ")" && lastBracket !== "(") ||
+                (char === "}" && lastBracket !== "{") ||
+                (char === "]" && lastBracket !== "[")
+            ){
+                return false;
+            }
+
+        }  
+    }
+    return brackets.length === 0;
+}
+
+console.log(checkBrackets("function someFn() { return [1, 2]; }"));
+console.log(checkBrackets("function someFn[) { return (1, 2]; }"));
+</code></pre>
+
+<button onclick="labTask6Array()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task6.jpg" alt="Скріншот виконання завдання №6">

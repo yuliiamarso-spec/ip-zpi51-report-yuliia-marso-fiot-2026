@@ -1,0 +1,83 @@
+<h2>Завдання №3</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+У звітному HTML-документі створити HTML-розмітку,
+яка складається зі списку елементів та кнопки.
+</p>
+
+<p>
+Після натискання на кнопку <strong>Подвоїти</strong>
+значення кожного елемента списку повинне збільшуватися у два рази.
+</p>
+
+<p><strong>Результат виконання:</strong></p>
+
+<div class="task-box">
+
+    <h3>ЗАВДАННЯ 3</h3>
+
+    <div class="task3-list">
+        <ul>
+            <li>1</li>
+            <li>4</li>
+            <li>8</li>
+            <li>16</li>
+            <li>20</li>
+            <li>30</li>
+        </ul>
+    </div>
+
+    <div class="task-controls">
+
+        <button id="doubleBtn">Подвоїти</button>
+
+    </div>
+
+</div>
+
+<p><strong>Код HTML:</strong></p>
+
+<pre><code>
+<pre><code>
+&lt;div class="task-box"&gt;
+
+    &lt;h3&gt;ЗАВДАННЯ 3&lt;/h3&gt;
+
+    &lt;div class="task3-list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;1&lt;/li&gt;
+            &lt;li&gt;4&lt;/li&gt;
+            &lt;li&gt;8&lt;/li&gt;
+            &lt;li&gt;16&lt;/li&gt;
+            &lt;li&gt;20&lt;/li&gt;
+            &lt;li&gt;30&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class="task-controls"&gt;
+
+        &lt;button id="doubleBtn"&gt;Подвоїти&lt;/button&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+</code></pre>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+const list = document.querySelector(".task3-list");
+const items = document.querySelectorAll(".task3-list li");
+const double = document.querySelector("#doubleBtn");
+
+doubleBtn.addEventListener("click", function () {
+
+    items.forEach(item => {
+        item.textContent = item.textContent * 2;
+    });
+
+});
+</code></pre>

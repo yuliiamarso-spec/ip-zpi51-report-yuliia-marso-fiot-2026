@@ -1,0 +1,82 @@
+<h2>Завдання №6</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Написати скрипт, який змінює колір фону елемента body
+через інлайн-стиль після натискання на кнопку.
+</p>
+
+<p>
+У HTML-документі створити блок div.widget, який містить текстовий
+елемент для відображення поточного кольору та кнопку зміни кольору.
+</p>
+
+<p>
+Необхідно:
+</p>
+
+<ul>
+    <li>знайти кнопку з класом change-color;</li>
+    <li>знайти елемент span.color;</li>
+    <li>додати обробник події click на кнопку;</li>
+    <li>після натискання згенерувати випадковий колір;</li>
+    <li>змінити колір фону body на згенерований колір;</li>
+    <li>записати значення кольору текстом у span.color.</li>
+</ul>
+
+<p>
+Для генерації випадкового кольору необхідно використати функцію
+getRandomHexColor().
+</p>
+
+<p><strong>Результат виконання:</strong></p>
+
+<div class="task-box">
+
+    <h3>ЗАВДАННЯ 6</h3>
+
+    <div class="widget">
+        <p>Background color: <span class="color">-</span></p>
+        <button type="button" class="change-color">Change color</button>
+    </div>
+
+</div>
+
+<p><strong>Код HTML:</strong></p>
+
+<pre><code>
+&lt;div class="task-box"&gt;
+
+    &lt;h3&gt;ЗАВДАННЯ 6&lt;/h3&gt;
+
+    &lt;div class="widget"&gt;
+        &lt;p&gt;Background color: &lt;span class="color"&gt;-&lt;/span&gt;&lt;/p&gt;
+        &lt;button type="button" class="change-color"&gt;Change color&lt;/button&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+const button = document.querySelector("button.change-color");    
+const colorText = document.querySelector("span.color");
+const taskBox = document.querySelector(".task-box");
+
+
+button.addEventListener("click", () => {
+
+    const color = getRandomHexColor();
+    taskBox.style.backgroundColor = color;        
+    colorText.textContent = color;
+
+});
+
+function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, 0)}`;
+}
+</code></pre>

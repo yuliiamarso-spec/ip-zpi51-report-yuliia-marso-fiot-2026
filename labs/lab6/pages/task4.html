@@ -1,0 +1,149 @@
+<h2>Завдання №4</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+У звітному HTML-документі створити список категорій ul#categories.
+</p>
+
+<p>
+Необхідно написати скрипт, який порахує кількість категорій
+у списку, тобто кількість елементів li.item,
+та виведе результат у консоль.
+</p>
+
+<p>
+Також для кожної категорії потрібно знайти і вивести в консоль
+текст заголовка h2 та кількість елементів
+усередині цієї категорії.
+</p>
+
+<p>
+Для виконання завдання необхідно використати метод
+forEach() і властивості навігації по DOM.
+</p>
+
+<p><strong>Результат виконання:</strong></p>
+
+<div class="task-box">
+
+    <h3>ЗАВДАННЯ 4</h3>
+
+    <ul id="categories">
+
+        <li class="item">
+
+            <h2>Animals</h2>
+
+            <ul>
+                <li>Cat</li>
+                <li>Hamster</li>
+                <li>Horse</li>
+                <li>Parrot</li>
+            </ul>
+
+        </li>
+
+        <li class="item">
+
+            <h2>Products</h2>
+
+            <ul>
+                <li>Bread</li>
+                <li>Parsley</li>
+                <li>Cheese</li>
+            </ul>
+
+        </li>
+
+        <li class="item">
+
+            <h2>Technologies</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+
+        </li>
+
+    </ul>
+
+</div>
+
+<p><strong>Код HTML:</strong></p>
+
+<pre><code>
+<pre><code>
+&lt;div class="task-box"&gt;
+
+    &lt;h3&gt;ЗАВДАННЯ 4&lt;/h3&gt;
+
+    &lt;ul id="categories"&gt;
+
+        &lt;li class="item"&gt;
+
+            &lt;h2&gt;Animals&lt;/h2&gt;
+
+            &lt;ul&gt;
+                &lt;li&gt;Cat&lt;/li&gt;
+                &lt;li&gt;Hamster&lt;/li&gt;
+                &lt;li&gt;Horse&lt;/li&gt;
+                &lt;li&gt;Parrot&lt;/li&gt;
+            &lt;/ul&gt;
+
+        &lt;/li&gt;
+
+        &lt;li class="item"&gt;
+
+            &lt;h2&gt;Products&lt;/h2&gt;
+
+            &lt;ul&gt;
+                &lt;li&gt;Bread&lt;/li&gt;
+                &lt;li&gt;Parsley&lt;/li&gt;
+                &lt;li&gt;Cheese&lt;/li&gt;
+            &lt;/ul&gt;
+
+        &lt;/li&gt;
+
+        &lt;li class="item"&gt;
+
+            &lt;h2&gt;Technologies&lt;/h2&gt;
+
+            &lt;ul&gt;
+                &lt;li&gt;HTML&lt;/li&gt;
+                &lt;li&gt;CSS&lt;/li&gt;
+                &lt;li&gt;JavaScript&lt;/li&gt;
+                &lt;li&gt;React&lt;/li&gt;
+                &lt;li&gt;Node.js&lt;/li&gt;
+            &lt;/ul&gt;
+
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+</code></pre>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+const categories = document.querySelector("#categories");
+const items = document.querySelectorAll("#categories .item");  
+
+console.log("Number of categories:", items.length);
+
+    items.forEach(item => { 
+        const title = item.querySelector("h2");
+        const elements = item.querySelectorAll("ul li");
+
+    console.log("Category:", title.textContent);    
+    console.log("Elements:", elements.length);
+    });
+</code></pre>
+
+<button onclick="initTask4()">Вівести у консоль</button>

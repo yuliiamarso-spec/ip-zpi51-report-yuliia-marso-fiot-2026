@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звітний документ</title>
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script src="script_lab2.js" defer></script>
+</head>
+
+<body>
+
+<!-- Початок обгортки сторінки -->
+<div class="page-wrapper">
+
+    <header>
+        <!-- Верхня панель з назвою -->
+        <div class="top-bar">
+            <div class="header-container">
+                <h1 class="text">
+                    ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ З ДИСЦИПЛІНИ "Проєктування WEB-застосувань"
+                </h1>
+            </div>
+        </div>
+
+        <!-- Середня панель із даними -->
+        <div class="middle-bar">
+            <div class="header-container middle-row">
+                <div class="author-text">
+                    Виконавець: Студентка групи ІП-зп51 Марсо Ю. Г.
+                </div>
+
+                <div class="author-photo">
+                    <img src="../../img/photo1.jpg" alt="photo">
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижнє меню навігації між лабораторними -->
+        <div class="bottom-bar">
+            <div class="header-container">
+                <nav class="menu">
+                    <a href="../../index.html">Головна</a>
+                    <a href="../lab1/lab1.html">Лабораторна 1</a>
+                    <a href="lab2.html">Лабораторна 2</a>
+                    <a href="../lab3/lab3.html">Лабораторна 3</a>
+                    <a href="../lab4/lab4.html">Лабораторна 4</a>
+                    <a href="../lab5/lab5.html">Лабораторна 5</a>
+                    <a href="../lab6/lab6.html">Лабораторна 6</a>
+                    <a href="../lab7/lab7.html">Лабораторна 7</a>
+                    <a href="../lab8/lab8.html">Лабораторна 8</a>
+                    <a href="../lab9/lab9.html">Лабораторна 9</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="main-container">
+
+        <div class="content-section">
+
+            <!-- Ліва панель із внутрішнім меню лабораторної -->
+            <div class="left-side">
+                <aside>
+                    <nav class="left-nav">
+                        <ul>
+                            <li><a href="javascript:void(0)" onclick="loadPage('tema2.html')">Тема і мета лабораторної роботи.</a></li>
+                            <li><a href="javascript:void(0)" onclick="loadPage('styles.html')">Способи підключення стилів</a></li>
+
+                            <li>
+                                <h3>Селектори</h3>
+                                <ul class="sub-menu">
+                                    <li><a href="javascript:void(0)" onclick="loadPage('tag.html')">Селектор тегу</a></li>
+                                    <li><a href="javascript:void(0)" onclick="loadPage('class.html')">Селектор класу</a></li>
+                                    <li><a href="javascript:void(0)" onclick="loadPage('ids.html')">Селектори ідентифікаторів</a></li>
+                                    <li><a href="javascript:void(0)" onclick="loadPage('other-selectors.html')">Інші селектори</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="javascript:void(0)" onclick="loadPage('css.html')">CSS: Шрифти. Текст. Таблиці. Фон. Контур. Списки. CSS просунутий</a></li>
+                            <li><a href="javascript:void(0)" onclick="loadPage('conclusions.html')">Висновки до ЛР №2</a></li>
+                            <li><a href="javascript:void(0)" onclick="loadPage('questions.html')">Контрольні питання</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+
+            <!-- Права панель для виведення контенту -->
+            <div class="right-side">
+                <div class="info-card" id="output">
+                    <h2>Вивід інформації тут</h2>
+                    <p>Оберіть пункт меню.</p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- завершення основного контейнера сторінки -->
+
+    <!-- Нижній колонтитул сайту -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2025 Марсо Ю. Г. – Звіти з лабораторних робіт з дисципліни "Проєктування WEB-застосувань"</p>
+            <p>Контакти: <a href="mailto:yuliia.marso@gmail.com">yuliia.marso@gmail.com</a></p>
+        </div>
+    </footer>
+
+</div> <!-- кінець обгортки сторінки -->
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<h2>Код головної сторінки</h2>
+
+<h3>Нижче наведено HTML-код головної сторінки:</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;DobroДій&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class="page-wrapper"&gt;
+
+    &lt;!-- HEADER Верхня частина сайту --&gt;
+    &lt;header&gt;
+
+        &lt;!-- Верхня смуга --&gt;
+        &lt;div class="top-bar"&gt;
+            &lt;div class="header-container"&gt;
+                &lt;div class="logo-block"&gt;
+                    &lt;h1 class="logo-text"&gt;
+                        D&lt;img src="img/heart.png" class="logo-icon"&gt;broДій
+                    &lt;/h1&gt;
+                    &lt;h2 class="slogan"&gt;Допомагай разом з нами!&lt;/h2&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Середня смуга --&gt;
+        &lt;div class="middle-bar"&gt;
+            &lt;div class="header-container"&gt;
+                &lt;h2 class="register"&gt;
+                    &lt;a href="#"&gt;Створити акцію / Увійти&lt;/a&gt;
+                &lt;/h2&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Нижня смуга меню --&gt;
+        &lt;div class="bottom-bar"&gt;
+            &lt;div class="header-container"&gt;
+                &lt;nav class="menu"&gt;
+                    &lt;a href="#"&gt;Головна&lt;/a&gt;
+                    &lt;a href="#"&gt;Каталог&lt;/a&gt;
+                    &lt;a href="#"&gt;Новини&lt;/a&gt;
+                    &lt;a href="#"&gt;Про проект&lt;/a&gt;
+                    &lt;a href="#"&gt;Контакти&lt;/a&gt;
+                &lt;/nav&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/header&gt;
+
+    &lt;!-- MAIN Основний контейнер --&gt;
+    &lt;div class="main-container"&gt;
+
+        &lt;!-- Таблиця статистики донатів --&gt;
+        &lt;div class="table-container"&gt;
+            &lt;h2&gt;Статистика донатів&lt;/h2&gt;
+
+            &lt;table class="donations-table"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Проєкт&lt;/th&gt;
+                        &lt;th&gt;Мета (UAH)&lt;/th&gt;
+                        &lt;th&gt;Зібрано (UAH)&lt;/th&gt;
+                        &lt;th&gt;Статус&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Допомога дітям&lt;/td&gt;
+                        &lt;td&gt;50000&lt;/td&gt;
+                        &lt;td&gt;32000&lt;/td&gt;
+                        &lt;td&gt;64%&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Благодійний фонд&lt;/td&gt;
+                        &lt;td&gt;100000&lt;/td&gt;
+                        &lt;td&gt;78000&lt;/td&gt;
+                        &lt;td&gt;78%&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Допомога тваринам&lt;/td&gt;
+                        &lt;td&gt;20000&lt;/td&gt;
+                        &lt;td&gt;12000&lt;/td&gt;
+                        &lt;td&gt;60%&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Секція донату з фоном --&gt;
+        &lt;section class="photo-wrapper"&gt;
+            &lt;img src="img/donate.webp" alt="Background" class="background-photo"&gt;
+
+            &lt;div class="donate-container"&gt;
+                &lt;h2&gt;Швидкий донат&lt;/h2&gt;
+
+                &lt;form class="donate-form"&gt;
+                    &lt;div class="donate-input"&gt;
+                        &lt;input type="number" placeholder="Ваш внесок" required&gt;
+                        &lt;span class="currency"&gt;UAH&lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="preset-buttons"&gt;
+                        &lt;button type="button"&gt;+100&lt;/button&gt;
+                        &lt;button type="button"&gt;+500&lt;/button&gt;
+                        &lt;button type="button"&gt;+1000&lt;/button&gt;
+                    &lt;/div&gt;
+
+                    &lt;button type="submit" class="submit-btn"&gt;Підтримати&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Два списки зліва та справа --&gt;
+        &lt;div class="donate-lists"&gt;
+
+            &lt;!-- Ліва колонка маркований список --&gt;
+            &lt;div class="donate-list-left"&gt;
+                &lt;h3&gt;На що йдуть ваші донати:&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Підтримка медичних закладів&lt;/li&gt;
+                    &lt;li&gt;Гуманітарні набори для сімей&lt;/li&gt;
+                    &lt;li&gt;Порятунок бездомних тварин&lt;/li&gt;
+                    &lt;li&gt;Допомога дітям та переселенцям&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Права колонка нумерований список --&gt;
+            &lt;div class="donate-list-right"&gt;
+                &lt;h3&gt;Як зробити донат:&lt;/h3&gt;
+                &lt;ol&gt;
+                    &lt;li&gt;Введіть суму у полі Ваш внесок&lt;/li&gt;
+                    &lt;li&gt;Виберіть готову суму або залиште свою&lt;/li&gt;
+                    &lt;li&gt;Натисніть кнопку Підтримати&lt;/li&gt;
+                    &lt;li&gt;Підтвердіть платіж у банку&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- Блок новин ліва та права частина --&gt;
+        &lt;div class="news-section"&gt;
+
+            &lt;!-- Ліва колонка новин --&gt;
+            &lt;div class="news-left"&gt;
+
+                &lt;div class="news-item"&gt;
+                    &lt;h2&gt;&lt;a href="#"&gt;Доступні акції&lt;/a&gt;&lt;/h2&gt;
+                    &lt;h3&gt;&lt;a href="#"&gt;Підтримка медичних закладів та тяжкохворих&lt;/a&gt;&lt;/h3&gt;
+                    &lt;a href="#"&gt;&lt;img src="img/photo1.jpg" alt="News 1"&gt;&lt;/a&gt;
+                    &lt;h4&gt;&lt;a href="#"&gt;"Серце допомоги"&lt;/a&gt;&lt;/h4&gt;
+                &lt;/div&gt;
+
+                &lt;div class="news-item"&gt;
+                    &lt;h3&gt;&lt;a href="#"&gt;Допомога людям із інвалідністю&lt;/a&gt;&lt;/h3&gt;
+                    &lt;a href="#"&gt;&lt;img src="img/photo2.jpg" alt="News 2"&gt;&lt;/a&gt;
+                    &lt;h4&gt;&lt;a href="#"&gt;"Рівні можливості"&lt;/a&gt;&lt;/h4&gt;
+                &lt;/div&gt;
+
+                &lt;div class="news-item"&gt;
+                    &lt;h3&gt;&lt;a href="#"&gt;Підтримка людей похилого віку&lt;/a&gt;&lt;/h3&gt;
+                    &lt;a href="#"&gt;&lt;img src="img/photo3.jpeg" alt="News 3"&gt;&lt;/a&gt;
+                    &lt;h4&gt;&lt;a href="#"&gt;"Повага у дії"&lt;/a&gt;&lt;/h4&gt;
+                &lt;/div&gt;
+
+                &lt;div class="news-item"&gt;
+                    &lt;h3&gt;&lt;a href="#"&gt;Допомога бездомним тваринам&lt;/a&gt;&lt;/h3&gt;
+                    &lt;a href="#"&gt;&lt;img src="img/photo4.jpg" alt="News 4"&gt;&lt;/a&gt;
+                    &lt;h4&gt;&lt;a href="#"&gt;"Теплі лапки"&lt;/a&gt;&lt;/h4&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Права колонка новин --&gt;
+            &lt;div class="news-right"&gt;
+
+                &lt;article class="news-article"&gt;
+                    &lt;h2&gt;&lt;a href="#"&gt;Новини&lt;/a&gt;&lt;/h2&gt;
+                    &lt;h3&gt;&lt;a href="#"&gt;Допомога постраждалим у зонах бойових дій&lt;/a&gt;&lt;/h3&gt;
+                    &lt;a href="#"&gt;&lt;img src="img/photo5.jpg" alt="News 5"&gt;&lt;/a&gt;
+                    &lt;h4&gt;&lt;a href="#"&gt;"Життя з нуля"&lt;/a&gt;&lt;/h4&gt;
+                    &lt;p&gt;У зонах бойових дій тисячі людей змушені залишати свої домівки та починати життя з нуля...&lt;/p&gt;
+                    &lt;a href="#" class="read-more"&gt;читати далі&lt;/a&gt;
+                &lt;/article&gt;
+
+                &lt;article class="news-article"&gt;
+                    &lt;h3&gt;&lt;a href="#"&gt;Збір коштів для дитячого будинку&lt;/a&gt;&lt;/h3&gt;
+                    &lt;a href="#"&gt;&lt;img src="img/photo6.jpg" alt="News 6"&gt;&lt;/a&gt;
+                    &lt;h4&gt;&lt;a href="#"&gt;Благодійна акція Подаруй дитині свято&lt;/a&gt;&lt;/h4&gt;
+                    &lt;p&gt;Благодійна акція Подаруй дитині свято спрямована на збір коштів для дітей...&lt;/p&gt;
+                    &lt;a href="#" class="read-more"&gt;читати далі&lt;/a&gt;
+                &lt;/article&gt;
+
+                &lt;!-- Бічна панель новин --&gt;
+                &lt;div class="news-sidebar"&gt;
+                    &lt;h3&gt;Корисні посилання&lt;/h3&gt;
+
+                    &lt;div class="sidebar-cards"&gt;
+                        &lt;div class="card"&gt;
+                            &lt;img src="img/arrow.svg" alt="Volunteering"&gt;
+                            &lt;p&gt;&lt;a href="#"&gt;Дізнайся як стати волонтером та допомогти прямо зараз.&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="card"&gt;
+                            &lt;img src="img/arrow.svg" alt="Donate"&gt;
+                            &lt;p&gt;&lt;a href="#"&gt;Обери проєкт та зроби свій внесок онлайн.&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="card"&gt;
+                            &lt;img src="img/arrow.svg" alt="News"&gt;
+                            &lt;p&gt;&lt;a href="#"&gt;Читайте останні новини та історії успіху.&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt; &lt;!-- завершення блоку news sidebar --&gt;
+            &lt;/div&gt; &lt;!-- завершення блоку news right --&gt;
+        &lt;/div&gt; &lt;!-- завершення блоку news section --&gt;
+
+    &lt;/div&gt; &lt;!-- завершення блоку main container --&gt;
+
+    &lt;!-- FOOTER Нижня частина сайту --&gt;
+    &lt;footer&gt;
+
+        &lt;!-- Верхня смуга футера --&gt;
+        &lt;div class="top-footer"&gt;
+            &lt;div class="footer-container"&gt;
+                &lt;div class="footer-text"&gt;Зв’яжіться з нами:&lt;/div&gt;
+
+                &lt;div class="social-icons"&gt;
+                    &lt;a href="#"&gt;&lt;img src="icons/Facebook.svg" class="social-icon"&gt;&lt;/a&gt;
+                    &lt;a href="#"&gt;&lt;img src="icons/Instagram.svg" class="social-icon"&gt;&lt;/a&gt;
+                    &lt;a href="#"&gt;&lt;img src="icons/Telegram.svg" class="social-icon"&gt;&lt;/a&gt;
+                    &lt;a href="#"&gt;&lt;img src="icons/YouTube.svg" class="social-icon"&gt;&lt;/a&gt;
+                    &lt;a href="#"&gt;&lt;img src="icons/LinkedIn.svg" class="social-icon"&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="middle-footer"&gt;
+            &lt;div class="footer-container"&gt;
+
+                &lt;div class="footer-column"&gt;
+                    &lt;h4&gt;Проєкти&lt;/h4&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Зробити добро&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Проєкти&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Кампанії&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Спецпроєкти&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;SMS благодійність&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Скарбнички&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;div class="footer-column"&gt;
+                    &lt;h4&gt;Про платформу&lt;/h4&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Про нас&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Як працює DobroДій&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Наші партнери&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Інше&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;div class="footer-column"&gt;
+                    &lt;h4&gt;FAQ&lt;/h4&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Як зробити добро&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Умови сервісу&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Способи оплати&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Умови конфіденційності&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+                &lt;div class="footer-column"&gt;
+                    &lt;h4&gt;Контакти&lt;/h4&gt;
+                    &lt;p&gt;м Київ вул Саксаганського 4а&lt;/p&gt;
+                    &lt;p&gt;info@dobrodiy.com&lt;/p&gt;
+                    &lt;p&gt;(044) 243 14 32&lt;/p&gt;
+                    &lt;p&gt;(044) 243 14 33&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="bottom-footer"&gt;
+            &lt;div class="footer-container"&gt;
+                &lt;p&gt;© 2025 DobroДій Всі права захищені.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/footer&gt;
+
+&lt;/div&gt; &lt;!-- завершення обгортки сторінки --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+</pre>

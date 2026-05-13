@@ -1,0 +1,65 @@
+<h2>Завдання №2</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Змінна day може набувати одне із 7 значень: 1, 2, 3, 4, 5, 6, 7.
+Це значення потрібно запитати у користувача через prompt.
+</p>
+
+<p>
+Якщо змінна має значення 1, то у змінну finish потрібно записати
+понеділок, якщо має значення 2 — вівторок і так далі.
+</p>
+
+<ul>
+    <li>
+        Розв’язати завдання через switch-case.
+    </li>
+    <li>
+        Додати default на випадок, якщо користувач введе в prompt щось інше.
+    </li>
+    <li>
+        Значення змінної finish вивести в консоль.
+    </li>
+</ul>
+
+<p><strong>Код JS:</strong></p>
+<pre><code>
+let day = Number(prompt("Введіть номер дня тижня"));
+    console.log(`Введений номер дня тижня: ${day}`);
+    let finish;
+
+    switch (day) {
+        case 1:
+            finish = "Понеділок";
+            break;
+        case 2:
+            finish = "Вівторок";
+            break;
+        case 3:
+            finish = "Середа";
+            break;
+        case 4:
+            finish = "Четвер";
+            break;    
+        case 5:
+            finish = "П'ятниця";
+            break; 
+        case 6:
+            finish = "Субота";
+            break;
+        case 7:
+            finish = "Нелідя";
+        default:
+            finish = "Неправильний номер дня тижня";
+    }
+console.log(`День тижня: ${finish}`);
+alert(`День тижня: ${finish}`);
+</code></pre>
+
+<button onclick="lab4Task2()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task2.jpg" alt="Скріншот виконання завдання №2">

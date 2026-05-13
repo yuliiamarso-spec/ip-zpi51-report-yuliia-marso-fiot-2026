@@ -1,0 +1,85 @@
+<h2>Завдання №4</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Напишіть функцію-конструктор Storage, яка створює об’єкти
+для управління складом товарів.
+</p>
+
+<p>
+При виклику функція-конструктор повинна отримувати один аргумент —
+початковий масив товарів — і записувати його у властивість items.
+</p>
+
+<p>
+У функції-конструкторі необхідно додати методи:
+</p>
+
+<ul>
+    <li>
+        getItems() — повертає масив товарів;
+    </li>
+
+    <li>
+        addItems(item) — отримує новий товар і додає його до поточного масиву;
+    </li>
+
+    <li>
+        removeItem(item) — отримує товар і, якщо він є в масиві, видаляє його.
+    </li>
+</ul>
+
+<p>
+Для перевірки роботи функції необхідно створити початковий масив товарів:
+</p>
+
+<p>
+const arr = ["apple", "banana", "mango"];
+</p>
+
+<p>
+Результат роботи програми необхідно вивести у консоль.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function Storage(items) {
+    this.items = items;
+
+    this.getItems = function() {
+        return this.items;
+    };
+
+    this.addItems = function(item) {
+        this.items.push(item);
+    };
+
+    this.removeItem = function(item) {
+        const index = this.items.indexOf(item);
+
+        if (index !== -1) {
+            this.items.splice(index, 1);
+        }
+    };
+}
+
+const fruits = ["apple", "banana", "mango"];
+
+const storage = new Storage(fruits);
+
+console.log(storage.getItems());
+
+storage.addItems("orange");
+console.log(storage.getItems());
+
+storage.removeItem("banana");
+console.log(storage.getItems());
+</code></pre>
+
+<button onclick="labTask4ObjArray()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task4.jpg" alt="Скріншот виконання завдання №4">

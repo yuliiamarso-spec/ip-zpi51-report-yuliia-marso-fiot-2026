@@ -1,0 +1,111 @@
+<h2>CSS: Шрифти, Текст, Таблиці, Фон, Контур, Списки, CSS просунутий</h2>
+
+<h3>1. Шрифти та текст</h3>
+<pre>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slogan, .register {
+    font-family: 'Nunito', sans-serif;
+}
+</pre>
+<p>Встановлюємо базовий шрифт для всього тіла, великі заголовки і тексти кнопок/слоганів — окремими шрифтами.</p>
+
+<h3>2. Таблиці</h3>
+<pre>
+.donations-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.donations-table th, .donations-table td {
+    padding: 15px 20px;
+    text-align: left;
+}
+</pre>
+<p>Таблиці мають скруглені кути, тінь, відступи в клітинках.</p>
+
+<h3>3. Фон</h3>
+<pre>
+.top-bar {
+    background-color: #000;
+    color: white;
+}
+
+.middle-bar {
+    background-color: #d18b97;
+}
+
+.photo-wrapper .background-photo {
+    filter: brightness(65%);
+}
+</pre>
+<p>Встановлюємо кольори смуг, затемнення фото для читабельності тексту поверх зображення.</p>
+
+<h3>4. Контур та тінь</h3>
+<pre>
+.donate-container {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+    border-radius: 22px;
+}
+</pre>
+<p>Скляна картка донату: напівпрозорий фон, ефект blur і тінь.</p>
+
+<h3>5. Списки</h3>
+<pre>
+.donate-list-left ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+    background-color: #d18b97;
+    border-radius: 50%;
+}
+
+.donate-list-right ol li::before {
+    content: counter(donate-counter);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e9b7b7;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</pre>
+<p>Кастомні маркери для списків та нумерації.</p>
+
+<h3>6. CSS просунутий (псевдокласи, анімації)</h3>
+<pre>
+.submit-btn:hover {
+    background: #b65672;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.22);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -46%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+</pre>
+<p>Анімація появи картки донату та ефекти при наведенні на кнопку.</p>

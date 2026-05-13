@@ -1,0 +1,96 @@
+<h2>Завдання №1</h2>
+
+<p><strong>Умова:</strong></p>
+
+<p>
+Оголосити функцію getProductDetails(productId, successCallback, errorCallback),
+яка отримує інформацію про товар за його ідентифікатором.
+</p>
+
+<p>
+Функція приймає три параметри:
+</p>
+
+<ul>
+    <li>
+        productId — ідентифікатор товару;
+    </li>
+
+    <li>
+        successCallback — колбек-функція, яка викликається у випадку успішного пошуку товару;
+    </li>
+
+    <li>
+        errorCallback — колбек-функція, яка викликається у випадку помилки.
+    </li>
+</ul>
+
+<p>
+У функції необхідно:
+</p>
+
+<ul>
+    <li>
+        виконати пошук товару за його ідентифікатором;
+    </li>
+
+    <li>
+        якщо товар знайдено — передати інформацію про нього у successCallback;
+    </li>
+
+    <li>
+        якщо товар не знайдено — викликати errorCallback та передати повідомлення про помилку.
+    </li>
+</ul>
+
+<p>
+У випадку успішного пошуку функція повинна передати об’єкт товару,
+який містить його ідентифікатор, назву та ціну.
+</p>
+
+<p>
+Якщо товар не знайдено, функція повинна передати повідомлення:
+</p>
+
+<p>
+Помилка: товар не знайдено.
+</p>
+
+<p><strong>Код JS:</strong></p>
+
+<pre><code>
+function getProductDetails (productId, successCallback, errorCallback) {
+    const products = [
+        { id: 1, name: "Ноутбук", price: 25000 },
+        { id: 2, name: "Смартфон", price: 15000 },
+        { id: 3, name: "Навушники", price: 3000 }
+    ];
+
+    const product = products.find(item => item.id === productId);
+
+    if (product) {
+        successCallback(product);
+    } else {
+        errorCallback("Помилка: товар не знайдено.");
+    }
+}
+
+    function showProduct(product) {
+        console.log("Товар знайдено:");
+        console.log(product);
+    }
+
+
+    function showError(message) {
+        console.log(message);
+    }
+
+getProductDetails(2, showProduct, showError);
+getProductDetails(10, showProduct, showError);
+</code></pre>
+
+<button onclick="labTask1Matrix()">Запустити</button>
+
+<p><strong>Скріншот результату виконання</strong></p>
+
+<img src="img/task1.jpg" alt="Скріншот виконання завдання №1">

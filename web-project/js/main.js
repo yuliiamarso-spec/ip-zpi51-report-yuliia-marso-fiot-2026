@@ -1,0 +1,2 @@
+initModal();
+initCatalog();
