@@ -1,24 +1,23 @@
-// Асинхронна функція для завантаження HTML-сторінки у контейнер #output
-async function loadPage(page) {
+async function loadPage(page, clickedLink = null) {
     try {
-        // Завантажуємо вміст файлу через fetch
         let response = await fetch("pages/" + page);
         let text = await response.text();
 
-        // Вставляємо отриманий HTML у контейнер #output
-        document.getElementById("output").innerHTML = text;
+        const output = document.getElementById("output");
+        output.innerHTML = text;
 
-        // Якщо в завантаженому HTML є iframe — встановлюємо правильний шлях
+        // Тільки для мобільної версії переносимо відповідь під натиснуте завдання
+        if (window.innerWidth <= 768 && clickedLink !== null) {
+            clickedLink.parentElement.appendChild(output);
+        }
+
         const iframe = document.querySelector('#output iframe');
         if (iframe) {
-            // Шлях до проєкту відносно сторінки, що викликає loadPage
             iframe.src = '../../web-project/index.html';
         }
 
     } catch (err) {
-        // Якщо сталася помилка завантаження — показуємо повідомлення у контейнері
         document.getElementById("output").innerHTML = "<p>Помилка завантаження файлу!</p>";
-        // Виводимо помилку у консоль для налагодження
         console.error(err);
     }
 }
