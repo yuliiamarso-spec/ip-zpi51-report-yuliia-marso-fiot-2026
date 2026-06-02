@@ -531,7 +531,35 @@ body {
     border-radius: 14px;
     display: block;
 }
+/* Мобільна версія */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
 
+    .left-side {
+        width: 100%;
+        box-sizing: border-box;
+        border-right: none;
+        border-radius: 0;
+    }
+
+    .right-side {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .info-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 header {
     position: sticky;
     top: 0;
