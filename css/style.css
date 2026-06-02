@@ -531,6 +531,7 @@ body {
     border-radius: 14px;
     display: block;
 }
+
 /* Мобільна версія */
 @media (max-width: 768px) {
     .content-section {
@@ -545,8 +546,7 @@ body {
     }
 
     .right-side {
-        width: 100%;
-        padding: 15px;
+        display: none;
     }
 
     .info-card {
@@ -567,5 +567,13 @@ body {
     .menu a {
         white-space: nowrap;
         font-size: 16px;
+    }
+
+    #output {
+        margin-top: 12px;
+        padding: 15px;
+        background: #ffffff;
+        border-radius: 14px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     }
 }
