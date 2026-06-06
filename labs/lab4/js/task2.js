@@ -27,6 +27,7 @@ function lab4Task2() {
             break;
         case 7:
             finish = "Нелідя";
+            break;
         default:
             finish = "Неправильний номер дня тижня";
     }
