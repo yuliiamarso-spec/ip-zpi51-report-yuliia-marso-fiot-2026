@@ -10,7 +10,7 @@ function lab4Task3() {
         login = prompt("Введіть логін користувача");
     }
 
-    if (login === "User1" || login === "User1" || login === "User1") {
+    if (login === "User1" || login === "User2" || login === "User3") {
  
         let password = (prompt("Введіть пароль")); 
     
